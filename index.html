@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>نادي أجوان الرياضي</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <img src="logo.jpeg" alt="نادي أجوان" class="logo-img" />
+        <span class="logo-text">أجوان</span>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="القائمة">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" data-section="home">الرئيسية</a></li>
+        <li><a href="#pool" class="nav-link" data-section="pool">حمامات السباحة</a></li>
+        <li><a href="#halls" class="nav-link" data-section="halls">قاعات الأفراح</a></li>
+        <li><a href="#gym" class="nav-link" data-section="gym">الجيم</a></li>
+        <li><a href="#kids" class="nav-link" data-section="kids">كيدز ايريا</a></li>
+        <li><a href="#football" class="nav-link" data-section="football">كرة القدم</a></li>
+        <li><a href="#padel" class="nav-link" data-section="padel">بادل</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">تواصل معنا</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SLIDER ========== -->
+  <section class="hero" id="home">
+    <div class="slider-track" id="sliderTrack">
+      <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1600&q=80')">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-badge">نادي أجوان الرياضي</span>
+          <h1>مرحباً بك في<br /><em>عالم البطولة</em></h1>
+          <p>الوجهة الرياضية الترفيهية الاجتماعية الأولى</p>
+          <a href="#pool" class="hero-btn">اكتشف النادي</a>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=1600&q=80')">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-badge">الجيم</span>
+          <h1>جيم بمعدات<br /><em>عالمية</em></h1>
+          <p>تدرب مع أفضل المدربين المتخصصين</p>
+          <a href="#gym" class="hero-btn">الجيم</a>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=1600&q=80')">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-badge">حمامات السباحة</span>
+          <h1>سباحة أولمبية<br /><em>بمعايير عالية</em></h1>
+          <p>استمتع بالسباحة في بيئة نظيفة وآمنة</p>
+          <a href="#pool" class="hero-btn">حمامات السباحة</a>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1600&q=80')">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-badge">قاعات الأفراح</span>
+          <h1>احتفالاتك تستحق<br /><em>الفخامة</em></h1>
+          <p>قاعات مجهزة بأعلى مستوى لأسعد لحظاتك</p>
+          <a href="#halls" class="hero-btn">قاعات الأفراح</a>
+        </div>
+      </div>
+      <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=1600&q=80')">
+        <div class="slide-overlay"></div>
+        <div class="slide-content">
+          <span class="slide-badge">ملاعب كرة القدم</span>
+          <h1>العب كالمحترفين<br /><em>على أرضنا</em></h1>
+          <p>ملاعب بمواصفات احترافية للأبطال</p>
+          <a href="#football" class="hero-btn">الملاعب</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slider Controls -->
+    <button class="slider-btn prev" id="sliderPrev">&#10094;</button>
+    <button class="slider-btn next" id="sliderNext">&#10095;</button>
+
+    <div class="slider-dots" id="sliderDots">
+      <span class="dot active" data-index="0"></span>
+      <span class="dot" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
+      <span class="dot" data-index="3"></span>
+      <span class="dot" data-index="4"></span>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT STRIP ========== -->
+  <div class="about-strip">
+    <div class="about-strip-inner">
+      <span>🏊 سباحة</span><span>🏋️ جيم</span><span>⚽ كرة قدم</span>
+      <span>🎾 بادل</span><span>🎉 قاعات أفراح</span><span>🧒 كيدز ايريا</span>
+      <span>🏊 سباحة</span><span>🏋️ جيم</span><span>⚽ كرة قدم</span>
+      <span>🎾 بادل</span><span>🎉 قاعات أفراح</span><span>🧒 كيدز ايريا</span>
+    </div>
+  </div>
+
+  <!-- ========== POOL SECTION ========== -->
+  <section class="section" id="pool">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-icon">🏊</div>
+        <h2 class="section-title">حمامات السباحة</h2>
+        <p class="section-sub">استمتع بتجربة سباحة لا مثيل لها في حمامات مجهزة بأعلى المعايير</p>
+      </div>
+      <div class="cards-grid">
+        <div class="card reveal">
+          <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1519315901367-f34ff9154487?w=700&q=80')"></div>
+          <div class="card-body">
+            <h3>حمام السباحة العائلي</h3>
+            <p>مساحة آمنة ومريحة للعائلات والأطفال مع منطقة ضحلة مخصصة</p>
+            <ul class="feature-list">
+              <li>✦ منطقة أطفال مستقلة</li>
+              <li>✦ إشراف مستمر</li>
+              <li>✦ أماكن جلوس مريحة</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1530549387789-4c1017266635?w=700&q=80')"></div>
+          <div class="card-body">
+            <h3>دروس السباحة</h3>
+            <p>برامج تعليمية متكاملة للمبتدئين والمتقدمين مع مدربين معتمدين</p>
+            <ul class="feature-list">
+              <li>✦ مدربون معتمدون دولياً</li>
+              <li>✦ جميع الأعمار</li>
+              <li>✦ جداول مرنة</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HALLS SECTION ========== -->
+  <section class="section section-dark" id="halls">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-icon">🎉</div>
+        <h2 class="section-title">قاعات الأفراح</h2>
+        <p class="section-sub">اجعل لحظاتك الخاصة أسطورية في قاعاتنا الفاخرة المجهزة لكل مناسبة</p>
+      </div>
+      <div class="cards-grid">
+        <div class="card reveal">
+          <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=700&q=80')"></div>
+          <div class="card-body">
+            <h3>القاعة الكبرى</h3>
+            <p>قاعة فاخرة تتسع لأكثر من 200 شخص مجهزة بأحدث أنظمة الصوت والإضاءة</p>
+            <ul class="feature-list">
+              <li>✦ سعة 200+ شخص</li>
+              <li>✦ ديكور قابل للتخصيص</li>
+              <li>✦ خدمة كاترينج متكاملة</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=700&q=80')"></div>
+          <div class="card-body">
+            <h3>قاعة الاحتفالات</h3>
+            <p>مناسبة للحفلات والمناسبات المتوسطة بديكور أنيق وأجواء مميزة</p>
+            <ul class="feature-list">
+              <li>✦ سعة 200 شخص</li>
+              <li>✦ فريق تنظيم محترف</li>
+              <li>✦ بار مشروبات راقي</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card reveal">
+          <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&q=80')"></div>
+          <div class="card-body">
+            <h3>خدمات المناسبات</h3>
+            <p>فريق متكامل من المتخصصين لتنظيم حفلك من الألف إلى الياء</p>
+            <ul class="feature-list">
+              <li>✦ تنسيق ديكور</li>
+              <li>✦ تصوير احترافي</li>
+              <li>✦ فريق خدمة متخصص</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GYM SECTION ========== -->
+  <section class="section" id="gym">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-icon">🏋️</div>
+        <h2 class="section-title">الجيم</h2>
+        <p class="section-sub">جهز جسمك على أحدث الأجهزة الرياضية مع أفضل المدربين المتخصصين</p>
+      </div>
+      <div class="gym-layout reveal">
+        <div class="gym-feature-big" style="background-image:url('https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=900&q=80')">
+          <div class="gym-overlay">
+            <h3>صالة رياضية متكاملة</h3>
+            <p>أكثر من 30 جهاز رياضي حديث</p>
+          </div>
+        </div>
+        <div class="gym-features-side">
+          <div class="gym-small-card reveal" style="background-image:url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=500&q=80')">
+            <div class="gym-overlay"><h4>أجهزة كارديو</h4></div>
+          </div>
+          <div class="gym-small-card reveal" style="background-image:url('https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=500&q=80')">
+            <div class="gym-overlay"><h4>أوزان حرة</h4></div>
+          </div>
+        </div>
+      </div>
+      <div class="gym-perks">
+        <div class="perk reveal"><div class="perk-icon">💪</div><h4>تدريب شخصي</h4><p>مدربون معتمدون لبرامج تدريب مخصصة</p></div>
+        <div class="perk reveal"><div class="perk-icon">🥗</div><h4>تغذية رياضية</h4><p>خطط غذائية متكاملة مع كل اشتراك</p></div>
+        <div class="perk reveal"><div class="perk-icon">📊</div><h4>تتبع التقدم</h4><p>قياسات دورية ومتابعة مستمرة</p></div>
+        <div class="perk reveal"><div class="perk-icon">🚿</div><h4>غرف تغيير فاخرة</h4><p>مرافق صحية متكاملة وأماكن تخزين آمنة</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== KIDS AREA SECTION ========== -->
+  <section class="section kids-section" id="kids">
+    <div class="kids-bg-decor"></div>
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-icon">🧒</div>
+        <h2 class="section-title">كيدز ايريا</h2>
+        <p class="section-sub">عالم سحري مليء بالمرح والمغامرة صُمم خصيصاً لأطفالنا الصغار</p>
+      </div>
+      <div class="kids-grid">
+        <div class="kids-card reveal">
+          <div class="kids-emoji">🎠</div>
+          <h3>منطقة اللعب الحر</h3>
+          <p>ألعاب متنوعة وآمنة للأطفال من 2 إلى 12 سنة في بيئة مراقبة</p>
+        </div>
+
+        <div class="kids-card reveal">
+          <div class="kids-emoji">🎂</div>
+          <h3>حفلات أعياد ميلاد</h3>
+          <p>نظم حفلة عيد ميلاد لا تُنسى لطفلك بكل التفاصيل الجميلة</p>
+        </div>
+
+        <div class="kids-card reveal">
+          <div class="kids-emoji">👮</div>
+          <h3>أمان تام</h3>
+          <p>مشرفون متخصصون وكاميرات مراقبة ومعدات آمنة معتمدة</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTBALL SECTION ========== -->
+  <section class="section section-dark" id="football">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-icon">⚽</div>
+        <h2 class="section-title">ملاعب كرة القدم</h2>
+        <p class="section-sub">العب على أرضنا الخضراء المجهزة بأعلى المعايير الاحترافية</p>
+      </div>
+      <div class="fields-showcase">
+        <div class="field-hero reveal" style="background-image:url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1200&q=80')">
+          <div class="field-overlay">
+            <div class="field-info">
+              <h3>ملعب كرة القدم الرئيسي</h3>
+              <p>أرضية عشب صناعي من الجيل الرابع · إضاءة ليلية احترافية · طاقة تقدر بألف مشجع</p>
+              <a href="#contact" class="field-btn">احجز الآن</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field-features">
+        <div class="ff reveal">🌿 عشب صناعي من الجيل الرابع</div>
+        <div class="ff reveal">💡 إضاءة ليلية قوية</div>
+        <div class="ff reveal">🚿 غرف تبديل ملابس</div>
+        <div class="ff reveal">📱 حجز أونلاين سهل</div>
+        <div class="ff reveal">🏆 بطولات منظمة</div>
+        <div class="ff reveal">⏰ متاح 7 أيام في الأسبوع</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PADEL SECTION ========== -->
+  <section class="section" id="padel">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-icon">🎾</div>
+        <h2 class="section-title">ملاعب البادل</h2>
+        <p class="section-sub">جرب الرياضة الأكثر انتشاراً في العالم على ملاعبنا </p>
+      </div>
+      <div class="padel-layout">
+        <div class="padel-imgs reveal">
+          <div class="padel-big" style="background-image:url('https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=800&q=80')"></div>
+          <div class="padel-small-group">
+            <div class="padel-small" style="background-image:url('https://images.unsplash.com/photo-1612534847738-b3af9bc31f0c?w=400&q=80')"></div>
+            <div class="padel-small" style="background-image:url('https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=400&q=80')"></div>
+          </div>
+        </div>
+        <div class="padel-info reveal">
+          <h3>البادل في أجوان</h3>
+          <p>ملاعب بادل مجهزة بأعلى مستوى بأرضيات احترافية وإضاءة قوية تناسب اللعب الليلي.</p>
+          <ul class="padel-features">
+            <li><span class="pf-icon">🌙</span> إضاءة ليلية</li>
+            <li><span class="pf-icon">🎯</span> مدربون محترفون</li>
+            <li><span class="pf-icon">🏆</span> بطولات شهرية</li>
+            <li><span class="pf-icon">🛒</span> تأجير المعدات</li>
+            <li><span class="pf-icon">📱</span> حجز إلكتروني</li>
+          </ul>
+          <a href="#contact" class="padel-btn">احجز ملعبك الآن</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section class="section contact-section" id="contact">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-icon">📞</div>
+        <h2 class="section-title">تواصل معنا</h2>
+        <p class="section-sub">نحن هنا لمساعدتك وإجابة جميع استفساراتك</p>
+      </div>
+      <div class="contact-layout">
+        <div class="contact-form reveal">
+          <h3>أرسل رسالة</h3>
+          <div class="form-group">
+            <label>الاسم الكامل</label>
+            <input type="text" placeholder="أدخل اسمك الكامل" class="form-input" />
+          </div>
+          <div class="form-group">
+            <label>رقم الهاتف</label>
+            <input type="tel" placeholder="01xxxxxxxxx" class="form-input" />
+          </div>
+          <div class="form-group">
+            <label>الخدمة المطلوبة</label>
+            <select class="form-input">
+              <option>اختر الخدمة</option>
+              <option>حمامات السباحة</option>
+              <option>قاعات الأفراح</option>
+              <option>الجيم</option>
+              <option>كيدز ايريا</option>
+              <option>كرة القدم</option>
+              <option>بادل</option>
+              <option>عضوية النادي</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>رسالتك</label>
+            <textarea placeholder="اكتب رسالتك هنا..." class="form-input form-textarea" rows="4"></textarea>
+          </div>
+          <button class="submit-btn" id="submitBtn">إرسال الرسالة</button>
+          <div class="form-success" id="formSuccess">✅ تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.</div>
+        </div>
+        <div class="contact-info reveal">
+          <div class="info-card">
+            <div class="info-icon">📍</div>
+            <div>
+              <h4>العنوان</h4>
+              <p>نادي أجوان الرياضي، بلطيم، كفر الشيخ، مصر</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">📞</div>
+            <div>
+              <h4>رقم الهاتف</h4>
+              <p>010 22260400</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">🕐</div>
+            <div>
+              <h4>مواعيد العمل</h4>
+              <p>السبت – الخميس: 7 ص – 11 م<br/>الجمعة: 1 م – 11 م</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">📱</div>
+            <div>
+              <h4>تابعنا</h4>
+              <div class="social-links">
+                <a href="https://www.facebook.com/ajwansportsclubbaltim" class="social-btn facebook">Facebook</a>
+                <a href="https://www.instagram.com/ajwansportsclubbaltim" class="social-btn instagram">Instagram</a>
+                <a href="https://wa.me/010 22260400" class="social-btn whatsapp">WhatsApp</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="logo.jpeg" alt="أجوان" class="footer-logo-img" />
+        <div>
+          <h3>نادي أجوان الرياضي</h3>
+          <p>جهاز مستقبل مصر للتنمية المستدامة</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="#pool">حمامات السباحة</a>
+        <a href="#halls">قاعات الأفراح</a>
+        <a href="#gym">الجيم</a>
+        <a href="#kids">كيدز ايريا</a>
+        <a href="#football">كرة القدم</a>
+        <a href="#padel">بادل</a>
+      </div>
+      <p class="footer-copy">© 2026 نادي أجوان الرياضي – جميع الحقوق محفوظة</p>
+    </div>
+  </footer>
+
+  <script src="images.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
