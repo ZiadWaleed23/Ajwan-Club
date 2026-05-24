@@ -1,0 +1,25 @@
+/* ============================================
+   نادي أجوان الرياضي - ملف التصميم
+   ألوان النادي: ذهبي #C9941A  |  تركواز #2A8FA3
+   ============================================ */
+
+:root {
+  --gold: #C9941A;
+  --gold-light: #E8B84B;
+  --gold-dark: #A07010;
+  --teal: #2A8FA3;
+  --teal-light: #3DB5CC;
+  --teal-dark: #1A6B7A;
+  --dark: #0E1117;
+  --dark-2: #141820;
+  --dark-3: #1C2230;
+  --dark-card: #1A2035;
+  --text: #F0ECE2;
+  --text-muted: #9A9080;
+  --white: #FFFFFF;
+  --radius: 16px;
+  --radius-sm: 8px;
+  --shadow: 0 8px 32px rgba(0,0,0,0.4);
+  --shadow-gold: 0 4px 24px rgba(201,148,26,0.25);
+  --transition: 0.35s cubic-bezier(0.4,0,0.2,1);
+}
