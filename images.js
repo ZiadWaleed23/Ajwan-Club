@@ -1,8 +1,6 @@
-// ===================================================
 // نادي أجوان الرياضي - ملف الصور
 // ===================================================
-// استبدل روابط الصور دي بصورك الحقيقية
-// Replace these URLs with your actual club photos
+// لو انا عايز ابدلها بأي صور تانيه عادي
 
 const AJWAN_IMAGES = {
 
@@ -80,6 +78,22 @@ const AJWAN_IMAGES = {
     "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=800&q=80",
     "https://images.unsplash.com/photo-1612534847738-b3af9bc31f0c?w=800&q=80",
     "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=800&q=80"
+  ],
+
+  // كافيه أركان - Arkan Café
+  cafe: [
+    "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1400&q=80",
+    "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80",
+    "https://images.unsplash.com/photo-1576424453792-6f5a22a73d08?q=80&w=464&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1762631178352-f7ae732b42c4?q=80&w=870&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80"
+  ],
+
+  // مطعم مشوي - Mashwi Restaurant
+  restaurant: [
+    "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=900&q=80",
+    "https://images.unsplash.com/photo-1544025162-d76694265947?w=500&q=80",
+    "https://images.unsplash.com/photo-1777891258069-454e66f8bedc?q=80&w=387&auto=format&fit=crop"
   ]
 };
 
