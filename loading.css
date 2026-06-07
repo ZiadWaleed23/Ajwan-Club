@@ -1,0 +1,133 @@
+#loading-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #0E1117;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#loading-screen.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ── Logo + Ring ── */
+.ls-logo-wrap {
+  position: relative;
+  width: 108px;
+  height: 108px;
+  margin-bottom: 1.6rem;
+}
+
+.ls-ring {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.ls-ring-bg {
+  fill: none;
+  stroke: rgba(201, 148, 26, 0.1);
+  stroke-width: 2.5;
+}
+
+.ls-ring-fg {
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.12s ease;
+}
+
+.ls-logo {
+  position: absolute;
+  inset: 8px;
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ── نجوم خلفية ── */
+.ls-stars {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.ls-star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(201, 148, 26, 0.35);
+  border-radius: 50%;
+  animation: lsTwinkle var(--dur, 3s) ease-in-out infinite var(--delay, 0s);
+}
+
+@keyframes lsTwinkle {
+  0%, 100% { opacity: 0.1; transform: scale(1); }
+  50%       { opacity: 0.7; transform: scale(1.5); }
+}
+
+/* ── Text ── */
+.ls-name {
+  font-family: 'Tajawal', 'Cairo', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #F0ECE2;
+  margin: 0 0 0.3rem;
+  direction: rtl;
+  letter-spacing: -0.01em;
+}
+
+.ls-sub {
+  font-family: 'Cairo', sans-serif;
+  font-size: 0.73rem;
+  font-weight: 400;
+  color: #5A5044;
+  margin: 0 0 2.2rem;
+  direction: rtl;
+  letter-spacing: 0.07em;
+}
+
+/* ── Progress ── */
+.ls-bar-track {
+  width: 200px;
+  height: 2px;
+  background: rgba(240, 236, 226, 0.05);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 0.65rem;
+}
+
+#ls-bar {
+  height: 100%;
+  width: 0%;
+  border-radius: 2px;
+  transition: width 0.12s ease;
+  background: linear-gradient(90deg, #A07010, #C9941A, #E8B84B, #3DB5CC);
+  background-size: 300% 100%;
+  animation: lsShimmer 2.5s linear infinite;
+}
+
+@keyframes lsShimmer {
+  0%   { background-position: 100% center; }
+  100% { background-position: -100% center; }
+}
+
+#ls-percent {
+  font-family: 'Cairo', monospace;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #5A5044;
+  letter-spacing: 0.06em;
+  min-width: 32px;
+  text-align: center;
+}
