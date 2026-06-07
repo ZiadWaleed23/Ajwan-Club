@@ -1,7 +1,3 @@
-/* ============================================
-   نادي أجوان الرياضي - ملف الجافاسكريبت
-   ============================================ */
-
 // ===== NAVBAR SCROLL =====
 const navbar = document.getElementById('navbar');
 
@@ -249,15 +245,5 @@ if (statsBar) statsObserver.observe(statsBar);
 document.addEventListener('keydown', (e) => {
   if (e.key === 'ArrowLeft') { nextSlide(); resetAutoSlide(); }
   if (e.key === 'ArrowRight') { prevSlide(); resetAutoSlide(); }
-});
-
-// ===== PAGE LOAD ANIMATION =====
-window.addEventListener('load', () => {
-  document.body.style.opacity = '0';
-  document.body.style.transition = 'opacity 0.4s ease';
-
-  setTimeout(() => {
-    document.body.style.opacity = '1';
-  }, 50);
 });
 
