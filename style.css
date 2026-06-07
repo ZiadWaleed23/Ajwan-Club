@@ -1193,6 +1193,7 @@ ul { list-style: none; }
 
   .cards-grid { grid-template-columns: 1fr; }
   .gym-layout { grid-template-columns: 1fr; height: auto; }
+  .gym-feature-big { min-height: 280px; }
   .gym-features-side { flex-direction: row; height: 140px; }
   .gym-perks { grid-template-columns: repeat(2,1fr); }
   .kids-grid { grid-template-columns: 1fr 1fr; }
