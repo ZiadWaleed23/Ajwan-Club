@@ -63,7 +63,9 @@ ul { list-style: none; }
   transition: transform var(--transition);
 }
 
-.nav-logo:hover .logo-img { transform: rotate(10deg) scale(1.05); }
+@media (hover: hover) and (pointer: fine) {
+  .nav-logo:hover .logo-img { transform: rotate(10deg) scale(1.05); }
+}
 
 .logo-text {
   font-family: 'Tajawal', sans-serif;
@@ -99,15 +101,24 @@ ul { list-style: none; }
   transition: right var(--transition), left var(--transition);
 }
 
-.nav-link:hover,
+/* الحفاظ على تأثير الـ active للأجهزة كلها */
 .nav-link.active {
   color: var(--gold-light);
 }
 
-.nav-link:hover::after,
 .nav-link.active::after {
   right: 0.5rem;
   left: 0.5rem;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .nav-link:hover {
+    color: var(--gold-light);
+  }
+  .nav-link:hover::after {
+    right: 0.5rem;
+    left: 0.5rem;
+  }
 }
 
 .hamburger {
@@ -233,10 +244,12 @@ ul { list-style: none; }
   box-shadow: var(--shadow-gold);
 }
 
-.hero-btn:hover {
-  background: var(--gold-light);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(201,148,26,0.45);
+@media (hover: hover) and (pointer: fine) {
+  .hero-btn:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(201,148,26,0.45);
+  }
 }
 
 /* Slider Controls */
@@ -256,10 +269,12 @@ ul { list-style: none; }
   backdrop-filter: blur(8px);
 }
 
-.slider-btn:hover {
-  background: var(--gold);
-  color: var(--dark);
-  border-color: var(--gold);
+@media (hover: hover) and (pointer: fine) {
+  .slider-btn:hover {
+    background: var(--gold);
+    color: var(--dark);
+    border-color: var(--gold);
+  }
 }
 
 .slider-btn.prev { right: 24px; }
@@ -385,12 +400,6 @@ ul { list-style: none; }
   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
 
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-gold);
-  border-color: rgba(201,148,26,0.35);
-}
-
 .card-img {
   height: 220px;
   background-size: cover;
@@ -398,7 +407,14 @@ ul { list-style: none; }
   transition: transform 0.6s ease;
 }
 
-.card:hover .card-img { transform: scale(1.04); }
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-gold);
+    border-color: rgba(201,148,26,0.35);
+  }
+  .card:hover .card-img { transform: scale(1.04); }
+}
 
 .card-body {
   padding: 1.5rem;
@@ -485,10 +501,12 @@ ul { list-style: none; }
   transition: all var(--transition);
 }
 
-.perk:hover {
-  border-color: var(--teal);
-  background: rgba(42,143,163,0.08);
-  transform: translateY(-4px);
+@media (hover: hover) and (pointer: fine) {
+  .perk:hover {
+    border-color: var(--teal);
+    background: rgba(42,143,163,0.08);
+    transform: translateY(-4px);
+  }
 }
 
 .perk-icon { font-size: 2.2rem; margin-bottom: 0.75rem; }
@@ -524,10 +542,12 @@ ul { list-style: none; }
   overflow: hidden;
 }
 
-.kids-card:hover {
-  border-color: var(--gold);
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-gold);
+@media (hover: hover) and (pointer: fine) {
+  .kids-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-gold);
+  }
 }
 
 .kids-card-featured,
@@ -595,9 +615,11 @@ ul { list-style: none; }
   transition: all var(--transition);
 }
 
-.field-btn:hover {
-  background: var(--gold-light);
-  transform: translateY(-2px);
+@media (hover: hover) and (pointer: fine) {
+  .field-btn:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+  }
 }
 
 .mini-field {
@@ -630,30 +652,32 @@ ul { list-style: none; }
 }
 
 .ff {
-  background: rgba(255, 255, 255, 0.03); /* خلفية شفافة خفيفة جداً */
-  backdrop-filter: blur(8px); /* تأثير الإزاز */
-  border: 1px solid rgba(201, 148, 26, 0.2); /* تحديد خفيف بلون دهبي يتماشى مع اللوجو */
-  border-radius: 50px; /* شكل الكبسولة الناعم */
+  background: rgba(255, 255, 255, 0.03); 
+  backdrop-filter: blur(8px); 
+  border: 1px solid rgba(201, 148, 26, 0.2); 
+  border-radius: 50px; 
   padding: 0.8rem 1.6rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px; /* مسافة بسيطة بين الأيقونة والنص */
+  gap: 8px; 
   text-align: center;
   font-size: 0.9rem;
   font-weight: 700;
   color: rgba(240, 236, 226, 0.9);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* ضل خفيف يدي عمق */
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* حركة ناعمة جداً */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); 
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); 
   cursor: default;
 }
 
-.ff:hover {
-  border-color: var(--gold); /* التحديد ينور دهبي */
-  color: var(--gold-light);
-  background: rgba(201, 148, 26, 0.08); /* الخلفية تاخد لون دهبي خفيف */
-  transform: translateY(-5px); /* تترفع لفوق شوية بنعومة */
-  box-shadow: 0 8px 25px rgba(201, 148, 26, 0.25); /* الضل يوسع وينور */
+@media (hover: hover) and (pointer: fine) {
+  .ff:hover {
+    border-color: var(--gold); 
+    color: var(--gold-light);
+    background: rgba(201, 148, 26, 0.08); 
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 25px rgba(201, 148, 26, 0.25); 
+  }
 }
 
 /* ===== PADEL ===== */
@@ -734,9 +758,11 @@ ul { list-style: none; }
   box-shadow: 0 4px 20px rgba(42,143,163,0.3);
 }
 
-.padel-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(42,143,163,0.5);
+@media (hover: hover) and (pointer: fine) {
+  .padel-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(42,143,163,0.5);
+  }
 }
 
 /* ===== CONTACT & MAP CONTAINER ===== */
@@ -746,10 +772,9 @@ ul { list-style: none; }
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 3rem;
-  align-items: stretch; /* تجعل الخريطة وصندوق المعلومات بنفس الارتفاع تلقائياً */
+  align-items: stretch; 
 }
 
-/* تصميم حاوية الخريطة الجديدة بديل الفورم */
 .map-container {
   background: var(--dark-card);
   border: 1px solid rgba(201,148,26,0.15);
@@ -760,12 +785,13 @@ ul { list-style: none; }
   transition: border-color var(--transition), box-shadow var(--transition);
 }
 
-.map-container:hover {
-  border-color: var(--gold);
-  box-shadow: var(--shadow-gold);
+@media (hover: hover) and (pointer: fine) {
+  .map-container:hover {
+    border-color: var(--gold);
+    box-shadow: var(--shadow-gold);
+  }
 }
 
-/* فلتر لوضع الـ Dark Mode الخفيف على الخريطة لتليق بألوان النادي */
 .map-container iframe {
   display: block;
   width: 100%;
@@ -785,9 +811,11 @@ ul { list-style: none; }
   transition: border-color var(--transition), transform var(--transition);
 }
 
-.info-card:hover {
-  border-color: var(--gold);
-  transform: translateX(-4px);
+@media (hover: hover) and (pointer: fine) {
+  .info-card:hover {
+    border-color: var(--gold);
+    transform: translateX(-4px);
+  }
 }
 
 .info-icon { font-size: 1.8rem; flex-shrink: 0; }
@@ -808,18 +836,24 @@ ul { list-style: none; }
 .social-links { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.5rem; }
 
 .social-btn {
-  padding: 6px 16px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.2rem;
   transition: all var(--transition);
+  text-decoration: none;
 }
 
 .social-btn.facebook { background: rgba(14, 112, 177, 0.15); color: #4e9af1; border: 1px solid rgba(24,119,242,0.3); }
 .social-btn.instagram { background: rgba(225, 48, 101, 0.12); color: #f0607a; border: 1px solid rgba(225,48,108,0.3); }
 .social-btn.whatsapp { background: rgba(37,211,102,0.12); color: #5de88a; border: 1px solid rgba(37,211,102,0.3); }
 
-.social-btn:hover { transform: translateY(-2px); filter: brightness(1.2); }
+@media (hover: hover) and (pointer: fine) {
+  .social-btn:hover { transform: translateY(-2px); filter: brightness(1.2); }
+}
 
 /* ===== CAFE ARKAN ===== */
 .cafe-hero {
@@ -871,12 +905,6 @@ ul { list-style: none; }
   transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
 }
 
-.cafe-menu-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--gold);
-  box-shadow: var(--shadow-gold);
-}
-
 .cafe-menu-img {
   height: 200px;
   background-size: cover;
@@ -884,8 +912,15 @@ ul { list-style: none; }
   transition: transform 0.6s ease;
 }
 
-.cafe-menu-card:hover .cafe-menu-img {
-  transform: scale(1.05);
+@media (hover: hover) and (pointer: fine) {
+  .cafe-menu-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--gold);
+    box-shadow: var(--shadow-gold);
+  }
+  .cafe-menu-card:hover .cafe-menu-img {
+    transform: scale(1.05);
+  }
 }
 
 .cafe-menu-body {
@@ -940,11 +975,13 @@ ul { list-style: none; }
   transition: all var(--transition);
 }
 
-.cafe-perk:hover {
-  background: rgba(42,143,163,0.18);
-  border-color: var(--teal-light);
-  color: var(--teal-light);
-  transform: translateY(-3px);
+@media (hover: hover) and (pointer: fine) {
+  .cafe-perk:hover {
+    background: rgba(42,143,163,0.18);
+    border-color: var(--teal-light);
+    color: var(--teal-light);
+    transform: translateY(-3px);
+  }
 }
 
 .cafe-perk-icon { font-size: 1.2rem; }
@@ -971,8 +1008,6 @@ ul { list-style: none; }
   transition: transform var(--transition);
 }
 
-.resto-big:hover { transform: scale(1.01); }
-
 .resto-small-group {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -987,7 +1022,10 @@ ul { list-style: none; }
   transition: transform var(--transition);
 }
 
-.resto-small:hover { transform: scale(1.02); }
+@media (hover: hover) and (pointer: fine) {
+  .resto-big:hover { transform: scale(1.01); }
+  .resto-small:hover { transform: scale(1.02); }
+}
 
 .resto-badge {
   display: inline-block;
@@ -1035,9 +1073,11 @@ ul { list-style: none; }
   transition: border-color var(--transition), background var(--transition);
 }
 
-.resto-item:hover {
-  border-color: var(--gold);
-  background: rgba(201,148,26,0.06);
+@media (hover: hover) and (pointer: fine) {
+  .resto-item:hover {
+    border-color: var(--gold);
+    background: rgba(201,148,26,0.06);
+  }
 }
 
 .resto-item-icon { font-size: 1.6rem; flex-shrink: 0; }
@@ -1067,10 +1107,12 @@ ul { list-style: none; }
   box-shadow: var(--shadow-gold);
 }
 
-.resto-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 35px rgba(201,148,26,0.5);
-  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+@media (hover: hover) and (pointer: fine) {
+  .resto-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 35px rgba(201,148,26,0.5);
+    background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  }
 }
 
 /* ===== RESPONSIVE – Cafe & Resto ===== */
@@ -1142,7 +1184,9 @@ ul { list-style: none; }
   transition: color var(--transition);
 }
 
-.footer-links a:hover { color: var(--gold); }
+@media (hover: hover) and (pointer: fine) {
+  .footer-links a:hover { color: var(--gold); }
+}
 
 .footer-copy { font-size: 0.78rem; color: var(--text-muted); }
 
@@ -1200,8 +1244,9 @@ ul { list-style: none; }
   .field-features { grid-template-columns: repeat(2,1fr); }
   .contact-layout { grid-template-columns: 1fr; }
   .map-container { min-height: 300px; }
-  .slider-btn.prev { right: 12px; }
-  .slider-btn.next { left: 12px; }
+  .slider-btn {
+  display: none;
+}
 }
 
 @media (max-width: 480px) {
