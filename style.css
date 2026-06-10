@@ -23,10 +23,11 @@ ul { list-style: none; }
 /* ===== NAVBAR ===== */
 .navbar {
   position: fixed;
-  top: 0; right: 0; left: 0;
+  top: 0.3rem; right: 0; left: 0;  /*top: 0   كان*/
+  border-radius: 50px;  /* مكنش موجود اصلا*/
+  height: 62px;   /* كان 72 بدل 62*/
   z-index: 1000;
   padding: 0 2rem;
-  height: 72px;
   display: flex;
   align-items: center;
   background: transparent;
